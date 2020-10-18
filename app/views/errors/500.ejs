@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/images/favicon.ico"/>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Ops! Erro interno</title>
+</head>
+<body>
+<%if (erro !=null) {%>
+    <h1><%=erro.message%></h1>
+    <pre><%=erro.stack%></pre>
+<%} else {%>
+    <h1>Desculpe, ocorreu um erro interno no sistema</h1>
+    <pre>Registramos o erro em nossos logs e nossa equipe irá realizar as devidas correções.</pre>
+<%}%>
+<br/>
+<a href="/">Clique aqui, que eu te encaminharei para página inicial do site.</a>
+</body>
+</html>
+
+

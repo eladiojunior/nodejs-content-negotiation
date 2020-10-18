@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nodejs_content:
+    container_name: nodejs_content
+    image: eladiojunior/nodejs_content:1.2
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - AMBIENTE=$AMBIENTE
+      - PORT=$PORT
+    ports:
+      - "8081:8081"
+    command: node app.js
